@@ -1,24 +1,24 @@
 function checkBlackCastileMove(id, type, x, y, newX, newY){
     if(newX > x && newY == y){
         if(checkBottomPathValidity(x, newX, newY)){
-            return checkLandingPosition(newX, newY);
+            return checkLandingPosition(newX, newY, type[0]);
         }
     }
     if(newX < x && newY == y){
         if(checkTopPathValidity(x, newX, newY)){
-            return checkLandingPosition(newX, newY);
+            return checkLandingPosition(newX, newY, type[0]);
         }
     }
     if(newX == x && newY > y){
         if(checkRightPathValidity(y, newY, x)){
-            return checkLandingPosition(newX, newY);
+            return checkLandingPosition(newX, newY, type[0]);
         }
         
     }
     if(newX == x && newY < y){
         if(checkLeftPathValidity(y, newY, x)){
             console.log("here");
-            return checkLandingPosition(newX, newY);
+            return checkLandingPosition(newX, newY, type[0]);
         }
     }
     return false;

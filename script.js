@@ -3,6 +3,8 @@ createBoard();
 populateBoard();
 let grid = [];
 
+let turn = true;
+
 let currentMousex = 0;
 let currentMousey = 0;
 popluateLogic();
